@@ -1,18 +1,21 @@
 <html>
 <head>
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.579.0.min.js"></script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 AWS.config.update({
-  region: "us-west-2",
+  region: "us-east-2",
   // The endpoint should point to the local or remote computer where DynamoDB (downloadable) is running.
   endpoint: 'http://localhost:8000',
   /*
     accessKeyId and secretAccessKey defaults can be used while using the downloadable version of DynamoDB. 
     For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
   */
-  accessKeyId: "fakeMyKeyId",
-  secretAccessKey: "fakeSecretAccessKey"
+  accessKeyId: "AKIAI56HIQWXQ3VHP5JA",
+  secretAccessKey: "dvpetuournZbhU7TFLL4ze6TsTEWDUSuGcDC0wOK"
 });
 
   /* 
@@ -82,18 +85,30 @@ function listMovies() {
 });
 }
 
-function createItem() {
+function createItem(table) {
     var params = {
-        TableName :"Movies",
+        TableName :table,
         Item:{
             "year": 2015,
-            "title": "The Big New Movie",
+            //"title": "The Big New Movie",
             "info":{
-                "plot": "Nothing happens at all.",
-                "rating": 0
             }
+        
         }
+        
     };
+    var table = document.getElementById('myTable');
+    var rowLength = table.rows.length;
+        // params.Item.title=table.rows[0].cells[1].querySelector('input').value;
+        // params.Item.year=table.rows[1].cells[1].querySelector('input').value;
+        // document.getElementById("testArea").value+= params.Item.title;
+        // document.getElementById("testArea").value+= params.Item.year;
+        params.Item.year=parseInt(table.rows[1].cells[1].querySelector('input').value);
+        params.Item.title=table.rows[0].cells[1].querySelector('input').value;
+    for(var i=2;i<rowLength;i++){
+        params.Item.info[table.rows[i].cells[0].innerHTML]=table.rows[i].cells[1].querySelector('input').value;
+        document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input');
+    }
     docClient.put(params, function(err, data) {
         if (err) {
             document.getElementById('textarea').innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
@@ -176,7 +191,7 @@ function deleteItem() {
 
 function queryData() {
     document.getElementById('textarea').innerHTML = "";
-    document.getElementById('textarea').innerHTML += "Querying for movies from 1985.";
+    document.getElementById('textarea').innerHTML += "Querying for movies from 2013.";
 
     var params = {
         TableName : "Movies",
@@ -185,7 +200,7 @@ function queryData() {
             "#yr": "year"
         },
         ExpressionAttributeValues: {
-            ":yyyy":1985
+            ":yyyy":2014
         }
     };
 
@@ -203,18 +218,18 @@ function queryData() {
 
 function scanData() {
     document.getElementById('textarea').innerHTML = "";
-    document.getElementById('textarea').innerHTML += "Scanning for movies between 1950 and 1975." + "\n";
+    document.getElementById('textarea').innerHTML += "Scanning for movies between 2013 and 2014." + "\n";
 
     var params = {
         TableName: "Movies",
-        ProjectionExpression: "#yr, title, info.rating",
+        ProjectionExpression: "#yr, title",
         FilterExpression: "#yr between :start_yr and :end_yr",
         ExpressionAttributeNames: {
             "#yr": "year"
         },
         ExpressionAttributeValues: {
-            ":start_yr": 1950,
-            ":end_yr": 1975
+            ":start_yr": 2000,
+            ":end_yr": 2015
         }
     };
 
@@ -227,13 +242,13 @@ function scanData() {
             // Print all the movies
             document.getElementById('textarea').innerHTML += "Scan succeeded: " + "\n";
             data.Items.forEach(function(movie) {
-                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + movie.info.rating + "\n";
+                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
             });
 
             // Continue scanning if we have more movies (per scan 1MB limitation)
-            document.getElementById('textarea').innerHTML += "Scanning for more..." + "\n";
-            params.ExclusiveStartKey = data.LastEvaluatedKey;
-            docClient.scan(params, onScan);            
+            // document.getElementById('textarea').innerHTML += "Scanning for more..." + "\n";
+            // params.ExclusiveStartKey = data.LastEvaluatedKey;
+            // docClient.scan(params, onScan);            
         }
     }
 }
@@ -293,33 +308,103 @@ function processFile(evt) {
         alert("Could not read movie data file");
     }
 }
+function myFunction(infor) {
+  var table = document.getElementById("myTable");
+  var info=document.getElementById('newInfo').value;
+table.insertRow(table.rows.length).innerHTML="<tr><td>"+info+"</td><td><input id='"+info+"'></td></tr>"
+}
 
+function readData(){
+    var table = document.getElementById('myTable');
+    var rowLength = table.rows.length;
+    // alert(rowLength);
+    for(var i=0;i<rowLength;i++){
+        document.getElementById("testArea").value+=table.rows[i].cells[0].innerHTML;
+        document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input').value;
+    }
+}
 </script>
+<style>
+    caption{
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
-<table border = 1>
-    <td>
-        <table border = 1>
+<table border = 0>
+    <td style="padding-right: 20px;">
+        <table>
         <caption>Table Operations</caption>
-        <td><input id="createTableButton" type="button" value="Create Table" onclick="createMovies();" /></td>
-        <td><input id="deleteTableButton" type="button" value="Delete Table" onclick="deleteMovies();" /></td>
-        <td><input id="listTablebutton" type="button" value="List Tables" onclick="listMovies();" /></td>
+        <td>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Create Table
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><button id="createTableButton" value="Create Table" onclick="createMovies();" class="btn btn-success" >Create Movie Table</li>
+                    <li><button id="" value="Create Table" onclick="" class="btn btn-danger" >Create Music Table</li>
+                </ul>
+            </div>
+        </td>
+        <td>
+            <div class="dropdown">
+                <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Delete Table
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><button id="deleteTableButton" value="Delete Table" onclick="deleteMovies();" class="btn btn-success" >Delete Movie Table</li>
+                    <li><button id="" value="Create Table" onclick="" class="btn btn-danger" >Delete Music Table</li>
+                </ul>
+            </div>
+        </td>
+        <td>
+            <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Show List Table
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><button id="listTablebutton" value="List Tables" onclick="listMovies();" class="btn btn-success" >List Movie Table</li>
+                    <li><button id="" value="Create Table" onclick="" class="btn btn-danger" >List Music Table</li>
+                </ul>
+            </div>
+        </td>
         </table>
     </td>
-    <td>
-        <table border = 1>
+    <td style="padding-right: 20px;">
+        <table>
             <caption>CRUD Operations</caption>
-            <td><input id="createItem" type="button" value="Create Item" onclick="createItem();" /></td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Create Item
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <table id="myTable">
+                            <tr>
+                                <td>Title</td>
+                                <td><input id="Title"></td>
+                            </tr>
+     
+                            <tr>
+                                <td>Year</td>
+                                <td><input id="Year"></td>
+                            </tr>    
+                        </table>
+                        <li><button id="addMoreInfo" type="button" onclick="myFunction()">Add Info: </button><input placeholder="New Info" id="newInfo"></li>
+                        <li>
+                            <button class="btn btn-info" onclick="readData()" >Movie</button>
+                            <button class="btn btn-default" onclick="createItem('Movies')">Music</button>
+                        </li>
+                    </ul>
+                </div>
+            </td>
             <td><input id="readItem" type="button" value="Read Item" onclick="readItem();" /></td>
             <td><input id="updateItem" type="button" value="Update Item" onclick="updateItem();" />
                 <td><input id="deleteItem" type="button" value="Delete Item" onclick="deleteItem();" /></td>
             </td>
         </table>
     </td>
-    <td>
+    <td style="padding-right: 20px;">
         <table border = 1>
             <caption>Query and Scan</caption>
+            <td></td>
             <td><input id="queryData" type="button" value="Query" onclick="queryData();" /></td>
             <td><input id="scanData" type="button" value="Scan" onclick="scanData();" /></td>
         </table>
@@ -333,7 +418,9 @@ function processFile(evt) {
 </table>
 
 <br>
-<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+<textarea  id= "testArea" style="width:30%; height:75%"></textarea>
+<textarea readonly id= "textarea" style="width:50%; height:75%"></textarea>
+
 
 <script>
     document.getElementById('fileinput').addEventListener('change', processFile, false);
