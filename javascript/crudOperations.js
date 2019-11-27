@@ -209,15 +209,15 @@ function deleteItem(table) {
     var a;
     if(table=="Movies"){
         a=document.getElementById("moviesDeleteItem").value;
-   }
+    }
    else if(table=="Musics"){
        a=document.getElementById("musicsDeleteItem").value;
-   }
-       var pos = a.search("-");
-       title=a.substr(0,pos);
-       
-       year=parseInt(a.substr(pos+1,a.length-1));
-       var t=year;
+    }
+    var pos = a.search("-");
+    title=a.substr(0,pos);
+    
+    year=parseInt(a.substr(pos+1,a.length-1));
+    var t=year;
        
     var params = {
         TableName:table,
