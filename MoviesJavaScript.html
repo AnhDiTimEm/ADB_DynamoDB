@@ -40,6 +40,10 @@ function readData(){
         document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input').value;
     }
 }
+function change(table){
+    //alert(document.getElementById("showTableImport").value);
+    document.getElementById("showTableImport").value=table;
+}
 </script>
 <style>
     caption{
@@ -130,26 +134,27 @@ function readData(){
             <td></td>
             <td>
                 <div class="dropdown">
-                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Query
-                            <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <label> Movies From</label>
-                                        <input id="yearMoviesQuery" placeholder="Fill Year...">
-                                        <button onclick="runQuery1()">Search</button>
-                                </li>
-                                <li >
-                                        <label> Musics From</label>
-                                            <input id="yearMusicsQuery" placeholder="Fill Year...">
-                                            <button onclick="runQuery2()">Search</button>
-                                    </li>
-                            </ul>
+                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Query
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <label> Movies From</label>
+                                <input id="yearMoviesQuery" placeholder="Fill Year...">
+                                <button onclick="runQuery1()">Search</button>
+                        </li>
+                        <li >
+                                <label> Musics From</label>
+                                    <input id="yearMusicsQuery" placeholder="Fill Year...">
+                                    <button onclick="runQuery2()">Search</button>
+                            </li>
+                    </ul>
+                </div>
                     
             </td>
                 <!-- <input id="queryData" type="button" value="Query" onclick="queryData();" /></td> -->
             <td>
                 <div class="dropdown">
-                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Scan
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Scan
                     <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li>
@@ -180,6 +185,20 @@ function readData(){
     <td>
         <table border = 1>
             <caption>Import JSON</caption>
+            <td>
+                <div class="dropdown">
+                    <input class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="showTableImport" value="Choose Table">
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input  type="button"id ="moviesImport" value="Movies" onclick="change('Movies')">
+                        </li>
+                        <li>
+                            <input  type="button"id ="musicsImport" value="Musics" onclick="change('Musics')">
+                        </li>
+                    </ul>
+                </div>
+            </td>
             <td><input type="file" id="fileinput" accept='application/json'/></td>
         </table>
     </td>

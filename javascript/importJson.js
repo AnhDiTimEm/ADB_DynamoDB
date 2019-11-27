@@ -2,6 +2,8 @@ function processFile(evt) {
     var moviesProcessed = 0;
     document.getElementById('textarea').innerHTML = "";
     document.getElementById('textarea').innerHTML += "Importing movies into DynamoDB. Please wait..." + "\n";
+    var tablee=document.getElementById('showTableImport').value;
+    alert(tablee);
     var file = evt.target.files[0];
     if (file) {
         var r = new FileReader();
@@ -13,7 +15,7 @@ function processFile(evt) {
             allMovies.forEach(function (movie) {
 
                 var params = {
-                    TableName: "Movies",
+                    TableName: tablee,
                     Item: {
                         "year": movie.year,
                         "title": movie.title,
