@@ -16,7 +16,7 @@ function createItem(table) {
         params.Item.title=table.rows[0].cells[1].querySelector('input').value;
     for(var i=2;i<rowLength;i++){
         params.Item.info[table.rows[i].cells[0].innerHTML]=table.rows[i].cells[1].querySelector('input').value;
-        document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input');
+        //document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input');
     }
     docClient.put(params, function(err, data) {
         if (err) {

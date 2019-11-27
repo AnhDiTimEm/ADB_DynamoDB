@@ -42,7 +42,7 @@ function Scan1(){
 
     var params = {
         TableName: "Movies",
-        ProjectionExpression: "#yr, title",
+        ProjectionExpression: "#yr, title, info.rating",
         FilterExpression: "#yr between :start_yr and :end_yr",
         ExpressionAttributeNames: {
             "#yr": "year"
@@ -62,7 +62,7 @@ function Scan1(){
             // Print all the movies
             document.getElementById('textarea').innerHTML += "Scan succeeded: " + "\n";
             data.Items.forEach(function(movie) {
-                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
+                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + movie.info.rating+ "\n";
             });            
         }
     }
@@ -76,7 +76,7 @@ function Scan2(){
 
     var params = {
         TableName: "Musics",
-        ProjectionExpression: "#yr, title",
+        ProjectionExpression: "#yr, title, info.rating",
         FilterExpression: "#yr between :start_yr and :end_yr",
         ExpressionAttributeNames: {
             "#yr": "year"
@@ -96,7 +96,7 @@ function Scan2(){
             // Print all the movies
             document.getElementById('textarea').innerHTML += "Scan succeeded: " + "\n";
             data.Items.forEach(function(movie) {
-                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
+                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " +movie.info.rating+ "\n";
             });            
         }
     }
