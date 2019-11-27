@@ -67,6 +67,7 @@ function Scan1(){
         }
     }
 }
+
 function Scan2(){
     var yst=parseInt(document.getElementById("year_stMusicsScan").value);
     var yen=parseInt(document.getElementById("year_enMusicsScan").value);

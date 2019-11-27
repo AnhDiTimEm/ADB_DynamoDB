@@ -122,7 +122,27 @@ function change(table){
                     </ul>
                 </div>
             </td>
-            <td><input id="readItem" type="button" value="Read Item" onclick="readItem();" /></td>
+            <td>
+                <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Create Item
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li>Music 
+                                <select id="moviesReadIteam">
+                                    <option>wtf</option>
+                                    <option>cec</option>
+                                </select>
+                            </li>
+                            <li>Movie 
+                                <select id="musicsReadItem">
+                                        <option>wtf</option>
+                                        <option>cec</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                <!-- <input id="readItem" type="button" value="Read Item" onclick="readItem();" /> -->
+            </td>
             <td><input id="updateItem" type="button" value="Update Item" onclick="updateItem();" />
                 <td><input id="deleteItem" type="button" value="Delete Item" onclick="deleteItem();" /></td>
             </td>
