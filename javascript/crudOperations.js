@@ -48,19 +48,19 @@ function readItem() {
     });
 }
 
-function getAllData(table) {
+function getAllData() {
     document.getElementById('textarea').innerHTML = "";
     document.getElementById('textarea').innerHTML += "Get all data." + "\n";
 
     var params = {
-        TableName: table,
+        TableName: "Movies",
         ProjectionExpression: "#yr, title",
         FilterExpression: "#yr between :start_yr and :end_yr",
         ExpressionAttributeNames: {
             "#yr": "year"
         },
         ExpressionAttributeValues: {
-            ":start_yr": 0,
+            ":start_yr": 1,
             ":end_yr": 9999
         }
     };
@@ -68,6 +68,7 @@ function getAllData(table) {
     docClient.scan(params, onScan);
 
     function onScan(err, data) {
+        var option;
         if (err) {
             document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
         } else {
@@ -75,12 +76,50 @@ function getAllData(table) {
             document.getElementById('textarea').innerHTML += "Get all succeeded: " + "\n";
             data.Items.forEach(function(movie) {
                 document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
-            });
+                document.getElementById('testArea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
+                option = document.createElement("option");
+                option.text = movie.title+"-"+movie.year;
+                document.getElementById("moviesReadItem").add(option);
+               
+            });            
+        }
+    }
+    getAllData2();
+}
+function getAllData2(){
+    document.getElementById('textarea').innerHTML = "";
+    document.getElementById('textarea').innerHTML += "Get all data." + "\n";
 
-            // Continue scanning if we have more movies (per scan 1MB limitation)
-            // document.getElementById('textarea').innerHTML += "Scanning for more..." + "\n";
-            // params.ExclusiveStartKey = data.LastEvaluatedKey;
-            // docClient.scan(params, onScan);            
+    var params = {
+        TableName: "Musics",
+        ProjectionExpression: "#yr, title",
+        FilterExpression: "#yr between :start_yr and :end_yr",
+        ExpressionAttributeNames: {
+            "#yr": "year"
+        },
+        ExpressionAttributeValues: {
+            ":start_yr": 1,
+            ":end_yr": 9999
+        }
+    };
+
+    docClient.scan(params, onScan);
+
+    function onScan(err, data) {
+        var option;
+        if (err) {
+            document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
+        } else {
+            // Print all the movies
+            document.getElementById('textarea').innerHTML += "Get all succeeded: " + "\n";
+            data.Items.forEach(function(movie) {
+                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
+                document.getElementById('testArea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
+                option = document.createElement("option");
+                option.text = movie.title+"-"+movie.year;
+                document.getElementById("musicsReadItem").add(option);
+               
+            });            
         }
     }
 }

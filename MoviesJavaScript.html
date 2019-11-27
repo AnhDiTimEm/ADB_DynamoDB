@@ -44,6 +44,12 @@ function change(table){
     //alert(document.getElementById("showTableImport").value);
     document.getElementById("showTableImport").value=table;
 }
+function droplist1() {
+  document.getElementById("moviesReadItem").size = 7;
+}
+function droplist2() {
+  document.getElementById("musicsReadItem").size = 7;
+}
 </script>
 <style>
     caption{
@@ -124,20 +130,20 @@ function change(table){
             </td>
             <td>
                 <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Create Item
+                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" onclick="getAllData()">Read Item
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                            <li>Music 
-                                <select id="moviesReadIteam">
-                                    <option>wtf</option>
-                                    <option>cec</option>
-                                </select>
+                            <li>
+                                <label>Musics</label>
+                                <select id="moviesReadItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
+                                </select>    
+                                <input type="button" value="Read" onclick=""/>
                             </li>
-                            <li>Movie 
-                                <select id="musicsReadItem">
-                                        <option>wtf</option>
-                                        <option>cec</option>
+                            <li>
+                                <label style="display: block">Movies</label>
+                                <select id="musicsReadItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
                                 </select>
+                                <input type="button" value="Read" onclick=""/>
                             </li>
                         </ul>
                     </div>
