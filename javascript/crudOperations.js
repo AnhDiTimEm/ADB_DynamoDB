@@ -217,6 +217,7 @@ function deleteItem(table) {
        var pos = a.search("-");
        title=a.substr(0,pos);
        year=parseInt(a.substr(pos+1,a.length));
+       alert(title +"///"+year);
     var params = {
         TableName:table,
         Key:{
