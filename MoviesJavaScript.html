@@ -45,6 +45,11 @@ function readData(){
     caption{
         text-align: center;
     }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 </style>
 </head>
 
@@ -102,7 +107,7 @@ function readData(){
      
                             <tr>
                                 <td>Year</td>
-                                <td><input id="Year"></td>
+                                <td><input id="Year" type="number"></td>
                             </tr>    
                         </table>
                         <li><button id="addMoreInfo" type="button" onclick="myFunction()">Add Info: </button><input placeholder="New Info" id="newInfo"></li>
@@ -120,18 +125,56 @@ function readData(){
         </table>
     </td>
     <td style="padding-right: 20px;">
-        <table border = 1>
+        <table>
             <caption>Query and Scan</caption>
             <td></td>
             <td>
-                    <!-- <div class="dropdown">
-                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Create Item
+                <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Query
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
+                                <li>
+                                    <label> Movies From</label>
+                                        <input id="yearMoviesQuery" placeholder="Fill Year...">
+                                        <button onclick="runQuery1()">Search</button>
+                                </li>
+                                <li >
+                                        <label> Musics From</label>
+                                            <input id="yearMusicsQuery" placeholder="Fill Year...">
+                                            <button onclick="runQuery2()">Search</button>
+                                    </li>
                             </ul>
-                    </div> -->
-                <input id="queryData" type="button" value="Query" onclick="queryData();" /></td>
-            <td><input id="scanData" type="button" value="Scan" onclick="scanData();" /></td>
+                    
+            </td>
+                <!-- <input id="queryData" type="button" value="Query" onclick="queryData();" /></td> -->
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Scan
+                    <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <table class="table table-striped">
+                                    <tr>
+                                        <td> Search Movies Between </td>
+                                        <td><input type="number" id="year_stMoviesScan"> </td>
+                                        <td> And </td>
+                                        <td><input type="number" id="year_enMoviesScan"></td>
+                                        <td><button class="btn btn-info" onclick="Scan1()">Search</button></td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td> Search Musics Between </td>
+                                        <td><input type="number" id="year_stMusicsScan"> </td>
+                                        <td> And </td>
+                                        <td><input type="number" id="year_enMusicsScan"></td>
+                                        <td><button class="btn btn-info" onclick="Scan2()">Search</button></td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                </div>
+                <!-- <input id="scanData" type="button" value="Scan" onclick="scanData();" /> -->
+            </td>
         </table>
     </td>
     <td>
