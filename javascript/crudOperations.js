@@ -68,7 +68,7 @@ function getAllData() {
     docClient.scan(params, onScan);
 
     function onScan(err, data) {
-        var option;
+        var option, option1, option2;
         if (err) {
             document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
         } else {
@@ -79,8 +79,13 @@ function getAllData() {
                 document.getElementById('testArea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
                 option = document.createElement("option");
                 option.text = movie.title+"-"+movie.year;
+                option1 = document.createElement("option");
+                option1.text = movie.title+"-"+movie.year;
+                option2 = document.createElement("option");
+                option2.text = movie.title+"-"+movie.year;
                 document.getElementById("moviesReadItem").add(option);
-               
+                document.getElementById("moviesUpdateItem").add(option1);
+                document.getElementById("moviesDeleteItem").add(option2);
             });            
         }
     }
@@ -106,7 +111,7 @@ function getAllData2(){
     docClient.scan(params, onScan);
 
     function onScan(err, data) {
-        var option;
+        var option, option1, option2;
         if (err) {
             document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
         } else {
@@ -117,8 +122,13 @@ function getAllData2(){
                 document.getElementById('testArea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
                 option = document.createElement("option");
                 option.text = movie.title+"-"+movie.year;
+                option1 = document.createElement("option");
+                option1.text = movie.title+"-"+movie.year;
+                option2 = document.createElement("option");
+                option2.text = movie.title+"-"+movie.year;
                 document.getElementById("musicsReadItem").add(option);
-               
+                document.getElementById("musicsUpdateItem").add(option1);
+                document.getElementById("musicsDeleteItem").add(option2);
             });            
         }
     }
