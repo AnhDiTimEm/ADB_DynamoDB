@@ -56,8 +56,41 @@ function readItem(table) {
         }
     });
 }
+function removeItem(textt){
+    var select = document.getElementById('moviesReadItem');
+    var select2=document.getElementById('moviesUpdateItem');
+    var select3=document.getElementById('moviesDeleteItem');
+    var select4=document.getElementById("musicsReadItem");
+    var select5=document.getElementById("musicsUpdateItem");
+    var select6=document.getElementById("musicsDeleteItem");
+    for (var i=0; i<select.length; i++) {
+        if (select.options[i].value == textt)
+            select.remove(i);
+    }
+    for (var i=0; i<select2.length; i++) {
+        if (select2.options[i].value == textt)
+            select2.remove(i);
+    }
+    for (var i=0; i<select3.length; i++) {
+        if (select3.options[i].value == textt)
+            select3.remove(i);
+    }
+    for (var i=0; i<select4.length; i++) {
+        if (select4.options[i].value == textt)
+            select4.remove(i);
+    }
+    for (var i=0; i<select5.length; i++) {
+        if (select5.options[i].value == textt)
+            select5.remove(i);
+    }
+    for (var i=0; i<select6.length; i++) {
+        if (select6.options[i].value == textt)
+            select6.remove(i);
+    }
 
+}
 function getAllData() {
+    //removeAll();
 
     var params = {
         TableName: "Movies",
@@ -196,6 +229,7 @@ function deleteItem(table) {
             document.getElementById('textarea').innerHTML = "Unable to delete item: " + "\n" + JSON.stringify(err, undefined, 2);
         } else {
             document.getElementById('textarea').innerHTML = "DeleteItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+            removeItem(a);
         }
     });
 }

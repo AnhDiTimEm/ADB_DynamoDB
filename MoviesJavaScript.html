@@ -159,13 +159,13 @@ function droplist2() {
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <label>Musics</label>
+                                    <label>Movies</label>
                                     <select id="moviesUpdateItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
                                     </select>    
                                     <input type="button" value="Update" onclick=""/>
                                 </li>
                                 <li>
-                                    <label style="display: block">Movies</label>
+                                    <label style="display: block">Musics</label>
                                     <select id="musicsUpdateItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
                                     </select>
                                     <input type="button" value="Update" onclick=""/>
@@ -180,16 +180,16 @@ function droplist2() {
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <label>Musics</label>
+                                    <label>Movies</label>
                                     <select id="moviesDeleteItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
                                     </select>    
-                                    <input type="button" value="Delete" onclick=""/>
+                                    <input type="button" value="Delete" onclick="deleteItem('Movies')"/>
                                 </li>
                                 <li>
-                                    <label style="display: block">Movies</label>
+                                    <label style="display: block">Musics</label>
                                     <select id="musicsDeleteItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
                                     </select>
-                                    <input type="button" value="Delete" onclick=""/>
+                                    <input type="button" value="Delete" onclick="deleteItem('Musics')"/>
                                 </li>
                             </ul>
                         </div>
