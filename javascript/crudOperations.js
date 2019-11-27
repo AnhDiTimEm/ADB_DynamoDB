@@ -27,11 +27,20 @@ function createItem(table) {
     });
 }
 
-function readItem() {
-    var table = "Movies";
-    var year = 2015;
-    var title = "The Big New Movie";
-
+function readItem(table) {
+    var year;
+    var a;
+    var title;
+    if(table=="Movies"){
+         a=document.getElementById("moviesReadItem").value;
+    }
+    else if(table=="Musics"){
+        a=document.getElementById("musicsReadItem").value;
+    }
+        var pos = a.search("-");
+        title=a.substr(0,pos);
+        year=parseInt(a.substr(pos+1,a.length));
+       // alert(title+year);
     var params = {
         TableName: table,
         Key:{
@@ -49,8 +58,6 @@ function readItem() {
 }
 
 function getAllData() {
-    document.getElementById('textarea').innerHTML = "";
-    document.getElementById('textarea').innerHTML += "Get all data." + "\n";
 
     var params = {
         TableName: "Movies",
@@ -70,13 +77,10 @@ function getAllData() {
     function onScan(err, data) {
         var option;
         if (err) {
-            document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
+             document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
         } else {
             // Print all the movies
-            document.getElementById('textarea').innerHTML += "Get all succeeded: " + "\n";
             data.Items.forEach(function(movie) {
-                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
-                document.getElementById('testArea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
                 option = document.createElement("option");
                 option.text = movie.title+"-"+movie.year;
                 document.getElementById("moviesReadItem").add(option);
@@ -87,8 +91,6 @@ function getAllData() {
     getAllData2();
 }
 function getAllData2(){
-    document.getElementById('textarea').innerHTML = "";
-    document.getElementById('textarea').innerHTML += "Get all data." + "\n";
 
     var params = {
         TableName: "Musics",
@@ -111,10 +113,7 @@ function getAllData2(){
             document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
         } else {
             // Print all the movies
-            document.getElementById('textarea').innerHTML += "Get all succeeded: " + "\n";
             data.Items.forEach(function(movie) {
-                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
-                document.getElementById('testArea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
                 option = document.createElement("option");
                 option.text = movie.title+"-"+movie.year;
                 document.getElementById("musicsReadItem").add(option);

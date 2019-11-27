@@ -31,15 +31,15 @@ function myFunction(infor) {
 table.insertRow(table.rows.length).innerHTML="<tr><td>"+info+"</td><td><input id='"+info+"'></td></tr>"
 }
 
-function readData(){
-    var table = document.getElementById('myTable');
-    var rowLength = table.rows.length;
-    // alert(rowLength);
-    for(var i=0;i<rowLength;i++){
-        document.getElementById("testArea").value+=table.rows[i].cells[0].innerHTML;
-        document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input').value;
-    }
-}
+// function readData(){
+//     var table = document.getElementById('myTable');
+//     var rowLength = table.rows.length;
+//     // alert(rowLength);
+//     for(var i=0;i<rowLength;i++){
+//         document.getElementById("testArea").value+=table.rows[i].cells[0].innerHTML;
+//         document.getElementById("testArea").value+=table.rows[i].cells[1].querySelector('input').value;
+//     }
+// }
 function change(table){
     //alert(document.getElementById("showTableImport").value);
     document.getElementById("showTableImport").value=table;
@@ -134,16 +134,16 @@ function droplist2() {
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li>
-                                <label>Musics</label>
+                                <label>Movies</label>
                                 <select id="moviesReadItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
                                 </select>    
-                                <input type="button" value="Read" onclick=""/>
+                                <input type="button" value="Read" onclick="readItem('Movies')"/>
                             </li>
                             <li>
-                                <label style="display: block">Movies</label>
+                                <label style="display: block">Musics</label>
                                 <select id="musicsReadItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
                                 </select>
-                                <input type="button" value="Read" onclick=""/>
+                                <input type="button" value="Read" onclick="readItem('Musics')"/>
                             </li>
                         </ul>
                     </div>
