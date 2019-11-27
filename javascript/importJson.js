@@ -3,7 +3,11 @@ function processFile(evt) {
     document.getElementById('textarea').innerHTML = "";
     document.getElementById('textarea').innerHTML += "Importing movies into DynamoDB. Please wait..." + "\n";
     var tablee=document.getElementById('showTableImport').value;
-    alert(tablee);
+    if(tablee=="Choose Table") {
+        document.getElementById('textarea').innerHTML="Please Choose a Table";
+        document.getElementById('fileinput').value="";
+        return;
+    }
     var file = evt.target.files[0];
     if (file) {
         var r = new FileReader();
