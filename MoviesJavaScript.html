@@ -149,8 +149,47 @@ function droplist2() {
                     </div>
                 <!-- <input id="readItem" type="button" value="Read Item" onclick="readItem();" /> -->
             </td>
-            <td><input id="updateItem" type="button" value="Update Item" onclick="updateItem();" />
-                <td><input id="deleteItem" type="button" value="Delete Item" onclick="deleteItem();" /></td>
+            <td>
+                    <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" onclick="getAllData()">Update Item
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <label>Musics</label>
+                                    <select id="moviesUpdateItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
+                                    </select>    
+                                    <input type="button" value="Update" onclick=""/>
+                                </li>
+                                <li>
+                                    <label style="display: block">Movies</label>
+                                    <select id="musicsUpdateItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
+                                    </select>
+                                    <input type="button" value="Update" onclick=""/>
+                                </li>
+                            </ul>
+                        </div>
+                <!-- <input id="updateItem" type="button" value="Update Item" onclick="updateItem();" /> -->
+            </td>
+            <td>
+                    <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" onclick="getAllData()">Delete Item
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <label>Musics</label>
+                                    <select id="moviesDeleteItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
+                                    </select>    
+                                    <input type="button" value="Delete" onclick=""/>
+                                </li>
+                                <li>
+                                    <label style="display: block">Movies</label>
+                                    <select id="musicsDeleteItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
+                                    </select>
+                                    <input type="button" value="Delete" onclick=""/>
+                                </li>
+                            </ul>
+                        </div>
+                <!-- <input id="deleteItem" type="button" value="Delete Item" onclick="deleteItem();" /> -->
             </td>
         </table>
     </td>
