@@ -162,13 +162,13 @@ function droplist2() {
                                     <label>Movies</label>
                                     <select id="moviesUpdateItem" onmouseover="droplist1()" onmouseout="this.size=1;"style="width: 200;">
                                     </select>    
-                                    <input type="button" value="Update" onclick=""/>
+                                    <input type="button" value="Update" onclick="updateItem('Movies')"/>
                                 </li>
                                 <li>
                                     <label style="display: block">Musics</label>
                                     <select id="musicsUpdateItem" onmouseover="droplist2()" onmouseout="this.size=1;" style="width: 200;">
                                     </select>
-                                    <input type="button" value="Update" onclick=""/>
+                                    <input type="button" value="Update" onclick="updateItem('Musics')"/>
                                 </li>
                             </ul>
                         </div>
@@ -274,7 +274,7 @@ function droplist2() {
 </table>
 
 <br>
-<!-- <textarea  id= "testArea" style="width:30%; height:75%"></textarea> -->
+<textarea  hidden id= "testArea" style="width:30%; height:75%"></textarea>
 <textarea readonly="" id="textarea" style="width: 70vw; height: calc(90vh - 70.22px)"></textarea>
 
 

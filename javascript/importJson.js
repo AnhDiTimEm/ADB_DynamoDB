@@ -47,7 +47,7 @@ function processFile(evt) {
                                 document.getElementById('textarea').innerHTML += "Finished processing!" + "\n";
                                 document.getElementById('textarea').innerHTML += "______________________" + "\n";
                                 break;
-                            default: {document.getElementById('testArea').innerHTML+=movie.title + "\n";
+                            default: {
                                 document.getElementById('textarea').innerHTML += "Added: " + movie.title + "\n";}
                         }
                         textarea.scrollTop = textarea.scrollHeight;

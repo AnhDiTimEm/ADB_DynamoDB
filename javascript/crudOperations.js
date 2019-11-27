@@ -170,14 +170,14 @@ function updateItem(table) {
     var title;
     var a;
     if(table=="Movies"){
-        a=document.getElementById("moviesReadItem").value;
+        a=document.getElementById("moviesUpdateItem").value;
      }
      else if(table=="Musics"){
-       a=document.getElementById("musicsReadItem").value;
+       a=document.getElementById("musicsUpdateItem").value;
     }
     var pos = a.search("-");
     title=a.substr(0,pos);
-    year=parseInt(a.substr(pos+1,a.length));
+    year=parseInt(a.substr(pos+1,a.length-1));
 
     var params = {
         TableName:table,
