@@ -123,10 +123,19 @@ function getAllData2(){
     }
 }
 
-function updateItem() {
-    var table = "Movies";
-    var year = 2015;
-    var title = "The Big New Movie";
+function updateItem(table) {
+    var year;
+    var title;
+    var a;
+    if(table=="Movies"){
+        a=document.getElementById("moviesReadItem").value;
+     }
+     else if(table=="Musics"){
+       a=document.getElementById("musicsReadItem").value;
+    }
+    var pos = a.search("-");
+    title=a.substr(0,pos);
+    year=parseInt(a.substr(pos+1,a.length));
 
     var params = {
         TableName:table,
@@ -152,11 +161,19 @@ function updateItem() {
     });
 }
 
-function deleteItem() {
-    var table = "Movies";
-    var year = 2015;
-    var title = "The Big New Movie";
-
+function deleteItem(table) {
+    var year;
+    var title;
+    var a;
+    if(table=="Movies"){
+        a=document.getElementById("moviesReadItem").value;
+   }
+   else if(table=="Musics"){
+       a=document.getElementById("musicsReadItem").value;
+   }
+       var pos = a.search("-");
+       title=a.substr(0,pos);
+       year=parseInt(a.substr(pos+1,a.length));
     var params = {
         TableName:table,
         Key:{
