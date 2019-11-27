@@ -1,0 +1,226 @@
+[
+    {
+        "year": 2010,
+        "title": "Riêng một góc trời",
+        "info": {
+            "composers": ["Ngô Thụy Miên"],
+            "rating": 9.9,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 1
+        }
+    },
+
+    {
+        "year": 2010,
+        "title": "Dấu tình sầu",
+        "info": {
+            "composers": ["Ngô Thụy Miên"],
+            "rating": 9.8,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 2
+        }
+    },
+
+    {
+        "year": 2010,
+        "title": "Mắt Biếc",
+        "info": {
+            "composers": ["Ngô Thụy Miên"],
+            "rating": 9.9,
+            "singers": [
+                "Anh Tuấn",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 3
+        }
+    },
+
+    {
+        "year": 2011,
+        "title": "Tình Khúc Buồn",
+        "info": {
+            "composers": ["Ngô Thụy Miên"],
+            "rating": 9.5,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Ngọc Lan",
+                "Tuấn Ngọc"
+            ],
+            "rank": 4
+        }
+    },
+
+    {
+        "year": 2011,
+        "title": "Paris có gì lạ không em?",
+        "info": {
+            "composers": ["Ngô Thụy Miên"],
+            "rating": 10,
+            "singers": [
+                "Elvis Phương",
+                "Vũ Khanh",
+                "Tuấn Ngọc",
+                "Ngọc Hạ"
+            ],
+            "rank": 1
+        }
+    },
+
+    {
+        "year": 2012,
+        "title": "Áo lụa hà đông",
+        "info": {
+            "composers": ["Ngô Thụy Miên"],
+            "rating": 9.2,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Khánh Ly",
+                "Tuấn Ngọc"
+            ],
+            "rank": 7
+        }
+    },
+
+    {
+        "year": 1999,
+        "title": "Bài không tên số 1",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 11
+        }
+    },
+
+    {
+        "year": 2000,
+        "title": "Bài không tên số 2",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9.5,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 12
+        }
+    },
+
+    {
+        "year": 2000,
+        "title": "Bài không tên số 3",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9.5,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 13
+        }
+    },
+
+    {
+        "year": 1999,
+        "title": "Bài không tên số 4",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9.4,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 18
+        }
+    },
+
+    {
+        "year": 1999,
+        "title": "Bài không tên số 5",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9.4,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 14
+        }
+    },
+
+    {
+        "year": 2004,
+        "title": "Bài không tên số 6",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9.9,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 11
+        }
+    },
+
+    {
+        "year": 2004,
+        "title": "Bài không tên số 7",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9.9,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 11
+        }
+    },
+
+    {
+        "year": 2005,
+        "title": "Bài không tên số 8",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 9,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 11
+        }
+    },
+    {
+        "year": 2018,
+        "title": "Bài không tên cuối cùng",
+        "info": {
+            "composers": ["Vũ Thành An"],
+            "rating": 10,
+            "singers": [
+                "Hồ Hoàng Yến",
+                "Bằng Kiều",
+                "Tuấn Ngọc"
+            ],
+            "rank": 0
+        }
+    }
+]

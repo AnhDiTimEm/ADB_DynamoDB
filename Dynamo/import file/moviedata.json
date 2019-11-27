@@ -47,7 +47,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 1999,
         "title": "The Hunger Games: Catching Fire",
         "info": {
             "directors": ["Francis Lawrence"],
@@ -70,7 +70,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 1998,
         "title": "Thor: The Dark World",
         "info": {
             "directors": ["Alan Taylor"],
@@ -91,7 +91,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2001,
         "title": "This Is the End",
         "info": {
             "directors": [
@@ -116,7 +116,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2001,
         "title": "Insidious: Chapter 2",
         "info": {
             "directors": ["James Wan"],
@@ -138,7 +138,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2008,
         "title": "World War Z",
         "info": {
             "directors": ["Marc Forster"],
@@ -163,11 +163,12 @@
         }
     },
     {
-        "year": 2014,
+        "year": 2009,
         "title": "X-Men: Days of Future Past",
         "info": {
             "directors": ["Bryan Singer"],
             "release_date": "2014-05-21T00:00:00Z",
+            "rating": 9.8,
             "genres": [
                 "Action",
                 "Adventure",
@@ -185,11 +186,12 @@
         }
     },
     {
-        "year": 2014,
+        "year": 2009,
         "title": "Transformers: Age of Extinction",
         "info": {
             "directors": ["Michael Bay"],
             "release_date": "2014-06-25T00:00:00Z",
+            "rating": 9.7,
             "genres": [
                 "Action",
                 "Adventure",
@@ -206,7 +208,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2009,
         "title": "Now You See Me",
         "info": {
             "directors": ["Louis Leterrier"],
@@ -229,7 +231,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2010,
         "title": "Gravity",
         "info": {
             "directors": ["Alfonso Cuaron"],
@@ -252,7 +254,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2010,
         "title": "We're the Millers",
         "info": {
             "directors": ["Rawson Marshall Thurber"],
@@ -343,7 +345,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2014,
         "title": "After Earth",
         "info": {
             "directors": ["M. Night Shyamalan"],
@@ -366,7 +368,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2015,
         "title": "The Great Gatsby",
         "info": {
             "directors": ["Baz Luhrmann"],
@@ -393,6 +395,7 @@
         "info": {
             "directors": ["Neil Burger"],
             "release_date": "2014-03-20T00:00:00Z",
+            "rating": 5.7,
             "genres": [
                 "Action",
                 "Adventure",
@@ -410,7 +413,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2015,
         "title": "We Are What We Are",
         "info": {
             "directors": ["Jim Mickle"],
@@ -461,6 +464,7 @@
         "info": {
             "directors": ["Marc Webb"],
             "release_date": "2014-04-17T00:00:00Z",
+            "rating": 7.7,
             "genres": [
                 "Action",
                 "Adventure",
@@ -477,7 +481,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 1999,
         "title": "Curse of Chucky",
         "info": {
             "directors": ["Don Mancini"],
@@ -499,7 +503,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 1999,
         "title": "The Conjuring",
         "info": {
             "directors": ["James Wan"],
@@ -526,6 +530,7 @@
         "info": {
             "directors": ["Spike Lee"],
             "release_date": "2013-10-10T00:00:00Z",
+            "rating": 8,
             "genres": [
                 "Action",
                 "Drama",
@@ -543,7 +548,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2014,
         "title": "Escape Plan",
         "info": {
             "directors": ["Mikael Hafstrom"],
@@ -566,7 +571,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2018,
         "title": "Elysium",
         "info": {
             "directors": ["Neill Blomkamp"],
@@ -590,8 +595,8 @@
         }
     },
     {
-        "year": 2013,
-        "title": "KHoa super",
+        "year": 2019,
+        "title": "Cloudy with a Chance of Meatballs 2",
         "info": {
             "directors": [
                 "Cody Cameron",
@@ -617,11 +622,12 @@
         }
     },
     {
-        "year": 2014,
+        "year": 2022,
         "title": "RoboCop",
         "info": {
             "directors": ["Jose Padilha"],
             "release_date": "2014-01-30T00:00:00Z",
+            "rating": 6.6,
             "genres": [
                 "Action",
                 "Crime",
@@ -639,11 +645,12 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2022,
         "title": "Carrie",
         "info": {
             "directors": ["Kimberly Peirce"],
             "release_date": "2013-10-07T00:00:00Z",
+            "rating": 6.6,
             "genres": [
                 "Drama",
                 "Horror"
@@ -659,7 +666,7 @@
         }
     },
     {
-        "year": 2013,
+        "year": 2023,
         "title": "The Mortal Instruments: City of Bones",
         "info": {
             "directors": ["Harald Zwart"],
@@ -681,178 +688,6 @@
                 "Lily Collins",
                 "Jamie Campbell Bower",
                 "Robert Sheehan"
-            ]
-        }
-    },
-    {
-        "year": 2014,
-        "title": "Captain America: The Winter Soldier",
-        "info": {
-            "directors": [
-                "Anthony Russo",
-                "Joe Russo"
-            ],
-            "release_date": "2014-04-02T00:00:00Z",
-            "genres": [
-                "Action",
-                "Adventure",
-                "Sci-Fi"
-            ],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMjAzMTg3MDcxM15BMl5BanBnXkFtZTcwNDQzNzI4OQ@@._V1_SX400_.jpg",
-            "plot": "Steve Rogers struggles to embrace his role in the modern world and teams up with Natasha Romanoff, aka Black Widow, to battle a powerful yet shadowy enemy in present-day Washington, D.C.",
-            "rank": 33,
-            "actors": [
-                "Chris Evans",
-                "Frank Grillo",
-                "Sebastian Stan"
-            ]
-        }
-    },
-    {
-        "year": 2014,
-        "title": "Need for Speed",
-        "info": {
-            "directors": ["Scott Waugh"],
-            "release_date": "2014-03-13T00:00:00Z",
-            "genres": ["Action"],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMjU2MTM3OTA3N15BMl5BanBnXkFtZTgwMjQ5MDYyMDE@._V1_SX400_.jpg",
-            "plot": "Fresh from prison, a street racer who was framed by a wealthy business associate joins a cross country race with revenge in mind. His ex-partner, learning of the plan, places a massive bounty on his head as the race begins.",
-            "rank": 34,
-            "actors": [
-                "Aaron Paul",
-                "Chillie Mo",
-                "Dominic Cooper"
-            ]
-        }
-    },
-    {
-        "year": 2013,
-        "title": "Runner Runner",
-        "info": {
-            "directors": ["Brad Furman"],
-            "release_date": "2013-09-25T00:00:00Z",
-            "rating": 5.4,
-            "genres": [
-                "Crime",
-                "Drama",
-                "Thriller"
-            ],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTU5OTA0MjI4Ml5BMl5BanBnXkFtZTgwMTgxOTQwMDE@._V1_SX400_.jpg",
-            "plot": "When a poor college student who cracks an online poker game goes bust, he arranges a face-to-face with the man he thinks cheated him, a sly offshore entrepreneur.",
-            "rank": 35,
-            "running_time_secs": 5460,
-            "actors": [
-                "Ben Affleck",
-                "Justin Timberlake",
-                "Gemma Arterton"
-            ]
-        }
-    },
-    {
-        "year": 2013,
-        "title": "I Spit on Your Grave 2",
-        "info": {
-            "directors": ["Steven R. Monroe"],
-            "release_date": "2013-08-25T00:00:00Z",
-            "rating": 5.5,
-            "genres": [
-                "Crime",
-                "Horror",
-                "Thriller"
-            ],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTc1Nzk3NjM0M15BMl5BanBnXkFtZTgwMjM5MzYyMDE@._V1_SX400_.jpg",
-            "rank": 36,
-            "running_time_secs": 6360,
-            "actors": [
-                "Jemma Dallender",
-                "Yavor Baharov",
-                "Joe Absolom"
-            ]
-        }
-    },
-    {
-        "year": 2013,
-        "title": "Battle of the Year",
-        "info": {
-            "directors": ["Benson Lee"],
-            "release_date": "2013-09-19T00:00:00Z",
-            "rating": 3.5,
-            "genres": ["Music"],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BOTY2OTcyNzM3NF5BMl5BanBnXkFtZTgwNzgxMjkxMDE@._V1_SX400_.jpg",
-            "plot": "Battle of the Year attracts all the best teams from around the world, but the Americans haven't won in fifteen years. Dante enlists Blake to assemble a team of the best dancers and bring the Trophy back to America where it started.",
-            "rank": 37,
-            "running_time_secs": 6600,
-            "actors": [
-                "Josh Holloway",
-                "Laz Alonso",
-                "Josh Peck"
-            ]
-        }
-    },
-    {
-        "year": 2013,
-        "title": "Behind the Candelabra",
-        "info": {
-            "directors": ["Steven Soderbergh"],
-            "release_date": "2013-05-21T00:00:00Z",
-            "rating": 7,
-            "genres": [
-                "Biography",
-                "Drama",
-                "Romance"
-            ],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTg0OTY2OTM0OF5BMl5BanBnXkFtZTcwMTk4OTQ1OQ@@._V1_SX400_.jpg",
-            "plot": "Based on the autobiographical novel, the tempestuous 6-year relationship between Liberace and his (much younger) lover, Scott Thorson, is recounted.",
-            "rank": 38,
-            "running_time_secs": 7080,
-            "actors": [
-                "Matt Damon",
-                "Scott Bakula",
-                "Eric Zuckerman"
-            ]
-        }
-    },
-    {
-        "year": 2013,
-        "title": "No se Aceptan Devoluciones",
-        "info": {
-            "directors": ["Eugenio Derbez"],
-            "release_date": "2013-08-30T00:00:00Z",
-            "rating": 6.9,
-            "genres": [
-                "Comedy",
-                "Drama"
-            ],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTUyNjI3ODI0N15BMl5BanBnXkFtZTcwMTQ1NTY5OQ@@._V1_SX400_.jpg",
-            "plot": "A man who has made a new life for himself and the daughter left on his doorstep 6 years ago finds his family threatened when the birth mother resurfaces.",
-            "rank": 39,
-            "running_time_secs": 6900,
-            "actors": [
-                "Eugenio Derbez",
-                "Karla Souza",
-                "Jessica Lindsey"
-            ]
-        }
-    },
-    {
-        "year": 2013,
-        "title": "The Bling Ring",
-        "info": {
-            "directors": ["Sofia Coppola"],
-            "release_date": "2013-05-16T00:00:00Z",
-            "rating": 5.8,
-            "genres": [
-                "Crime",
-                "Drama"
-            ],
-            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTQzMTgwMzQxN15BMl5BanBnXkFtZTcwOTcwNTY0OQ@@._V1_SX400_.jpg",
-            "plot": "Inspired by actual events, a group of fame-obsessed teenagers use the internet to track celebrities' whereabouts in order to rob their homes.",
-            "rank": 41,
-            "running_time_secs": 5400,
-            "actors": [
-                "Katie Chang",
-                "Israel Broussard",
-                "Emma Watson"
             ]
         }
     }
