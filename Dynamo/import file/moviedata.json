@@ -164,7 +164,7 @@
     },
     {
         "year": 2009,
-        "title": "X-Men: Days of Future Past",
+        "title": "X Men: Days of Future Past",
         "info": {
             "directors": ["Bryan Singer"],
             "release_date": "2014-05-21T00:00:00Z",
@@ -176,7 +176,7 @@
                 "Sci-Fi"
             ],
             "image_url": "http://ia.media-imdb.com/images/M/MV5BMTQ0NzIwNTA1MV5BMl5BanBnXkFtZTgwNjY2OTcwMDE@._V1_SX400_.jpg",
-            "plot": "The X-Men send Wolverine to the past to change a major historical event that could globally impact man and mutant kind.",
+            "plot": "The X Men send Wolverine to the past to change a major historical event that could globally impact man and mutant kind.",
             "rank": 9,
             "actors": [
                 "Jennifer Lawrence",
@@ -460,7 +460,7 @@
     },
     {
         "year": 2014,
-        "title": "The Amazing Spider-Man 2",
+        "title": "The Amazing Spider Man 2",
         "info": {
             "directors": ["Marc Webb"],
             "release_date": "2014-04-17T00:00:00Z",

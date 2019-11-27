@@ -39,8 +39,7 @@ function readItem(table) {
     }
         var pos = a.search("-");
         title=a.substr(0,pos);
-        year=parseInt(a.substr(pos+1,a.length));
-       // alert(title+year);
+        year=parseInt(a.substr(pos+1,a.length-1));
     var params = {
         TableName: table,
         Key:{
@@ -209,15 +208,17 @@ function deleteItem(table) {
     var title;
     var a;
     if(table=="Movies"){
-        a=document.getElementById("moviesReadItem").value;
+        a=document.getElementById("moviesDeleteItem").value;
    }
    else if(table=="Musics"){
-       a=document.getElementById("musicsReadItem").value;
+       a=document.getElementById("musicsDeleteItem").value;
    }
        var pos = a.search("-");
        title=a.substr(0,pos);
-       year=parseInt(a.substr(pos+1,a.length));
-       alert(title +"///"+year);
+       
+       year=parseInt(a.substr(pos+1,a.length-1));
+       var t=year;
+       
     var params = {
         TableName:table,
         Key:{
