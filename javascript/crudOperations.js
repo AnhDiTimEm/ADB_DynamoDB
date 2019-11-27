@@ -48,6 +48,43 @@ function readItem() {
     });
 }
 
+function getAllData(table) {
+    document.getElementById('textarea').innerHTML = "";
+    document.getElementById('textarea').innerHTML += "Get all data." + "\n";
+
+    var params = {
+        TableName: table,
+        ProjectionExpression: "#yr, title",
+        FilterExpression: "#yr between :start_yr and :end_yr",
+        ExpressionAttributeNames: {
+            "#yr": "year"
+        },
+        ExpressionAttributeValues: {
+            ":start_yr": 0,
+            ":end_yr": 9999
+        }
+    };
+
+    docClient.scan(params, onScan);
+
+    function onScan(err, data) {
+        if (err) {
+            document.getElementById('textarea').innerHTML += "Unable to get all the table: " + "\n" + JSON.stringify(err, undefined, 2);
+        } else {
+            // Print all the movies
+            document.getElementById('textarea').innerHTML += "Get all succeeded: " + "\n";
+            data.Items.forEach(function(movie) {
+                document.getElementById('textarea').innerHTML += movie.year + ": " + movie.title + " - rating: " + "\n";
+            });
+
+            // Continue scanning if we have more movies (per scan 1MB limitation)
+            // document.getElementById('textarea').innerHTML += "Scanning for more..." + "\n";
+            // params.ExclusiveStartKey = data.LastEvaluatedKey;
+            // docClient.scan(params, onScan);            
+        }
+    }
+}
+
 function updateItem() {
     var table = "Movies";
     var year = 2015;
